@@ -36,27 +36,6 @@ public class EncontrarVogalNaoRepetidaTest {
 	}
 	
 	@Test
-	public void encontraStreamComNumeroTest() {
-		Stream stream = new StreamImpl("aAbBABaca1e");
-		Optional<Character> vogal = VogalNaoRepetida.procuraVogalNaoRepetida(stream);
-		assertThat(vogal).isEmpty();
-	}
-	
-	@Test
-	public void encontraStreamComCaracterEspecialTest() {
-		Stream stream = new StreamImpl("aAbBABaca%e");
-		Optional<Character> vogal = VogalNaoRepetida.procuraVogalNaoRepetida(stream);
-		assertThat(vogal).isEmpty();
-	}
-	
-	@Test
-	public void streamComEspacoTest() {
-		Stream stream = new StreamImpl("aAbBABaca e");
-		Optional<Character> vogal = VogalNaoRepetida.procuraVogalNaoRepetida(stream);
-		assertThat(vogal).isEmpty();
-	}
-	
-	@Test
 	public void streamComMaisDeUmCaracterEncontradoTest() {
 		Stream stream = new StreamImpl("aAbBABacafefu");
 		Optional<Character> vogal = VogalNaoRepetida.procuraVogalNaoRepetida(stream);
